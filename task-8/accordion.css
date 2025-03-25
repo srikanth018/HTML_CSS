@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa;
+}
+
+.accordion-container {
+    background-color: #8bd3dd;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-header {
+    padding: 16px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e1e5eb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 1.1em;
+}
+
+.accordion-header:hover {
+    background-color: #f8fafc;
+}
+
+.accordion-header a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: max-height 0.5s ease-out, padding 0.3s ease;
+    padding: 0 20px;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+/* Show content when targeted with animation */
+#section1:target,
+#section2:target,
+#section3:target {
+    max-height: 500px;
+    padding: 20px;
+    border-bottom: 1px solid #e1e5eb;
+}
